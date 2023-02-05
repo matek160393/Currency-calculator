@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script defer src="js/script.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <title>Kalkulator walut</title>
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="header__heading">Internetowy Kantor</h1>
+    </header>
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kalkulator walut</legend>
+            <p>
+                <span class="form__required">
+                    (Pole wymagane oznaczone *)
+                </span>
+            </p>
+            <label class="form__amount">
+                Kwota (PLN) * : 
+                <input class="form__amountInput js-form__amount"
+                  required
+                  placeholder="wpisz kwotę od 1-10000" 
+                  step="0.01" 
+                  min="0.01" 
+                  max="10000" 
+                  type="number" 
+                  name="exchange amount">
+            </label>
+         <p>
+            <label>
+                Wymiana na :
+                <select class="form__selectionCurrency js-form__currency" 
+                        name="currency">
+                    <option value="EUR">Euro</option>
+                    <option value="USD">Dolar amerykański</option>
+                    <option value="CZK">Korona czeska</option>
+                </select>
+            </label>
+         </p>
+         <p class="form__exchange">
+            Kurs :
+            <span class="form__exchangeCurrency"></span>
+         </p>
+         <button class="form__button">Przelicz</button>
+         <p class="form__sum">
+            po przewalutowaniu otrzymasz kwotę :
+            <span class="form__result js-form__result"></span>
+         </p>
+         <p class="form__paragraph">
+            <strong>
+                Kalkulator walutowy jest narzędziem służącym
+                do orientacyjnego przeliczaniakursów walut.
+            </strong>
+         </p>
+        </fieldset>
+    </form>
+    <section class="section">
+        <p class="section__paragraph">
+            <span class="section__question">Kończymy na dziś ?</span>
+            <button class="section__button">Tak</button>
+        </p>
+    </section>
+    <footer class="footer">
+        <p class="footer__paragraph">
+            Kalkulator walut stworzony na potrzeby kursu Youcode.
+        </p>
+    </footer>
+</body>

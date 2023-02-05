@@ -1,0 +1,10 @@
+.header {
+    background-color: #3ec2b7;
+    margin: 5px auto;
+    box-shadow: inset 2px 2px 30px 2px #223333;
+}
+
+.header__heading {
+    padding: 10px;
+    margin: 10px auto;
+}

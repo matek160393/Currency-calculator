@@ -1,0 +1,11 @@
+.footer {
+    background-color: #3ec2b7;
+    margin: 20px 0px;
+    box-shadow: inset 2px 2px 30px 2px #223333;
+}
+
+.footer__paragraph {
+    padding: 10px;
+    margin: 2px;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+.section {
+    background-color: #3ec2b7;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 50px 20px #223333;
+    font-size: 20px;
+}
+
+.section__paragraph {
+    padding: 0px 29px;
+}
+
+.section__question {
+    border-bottom: solid;
+    font-weight: 700;
+}
+
+.section__button {
+    padding: 10px;
+    margin: 10px auto;
+    color: aliceblue;
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 3px;
+    box-shadow: inset 2px 2px 30px 2px #223333;
+    border-radius: 20px;
+    background-color: #73807e;
+    border: none;
+}
+
+.section__button:hover {
+    background-color: #8e9c9a;
+    font-weight: bold;
+    color: #087408;
+    cursor: pointer;
+}
+
+.section__button:active {
+    background-color: #c5c7c6;
+}
