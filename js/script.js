@@ -42,7 +42,7 @@
         const amount = +amountElement.value;
         const currency = currencyElement.value;
 
-        const result = calculateResult(amount, currency, EUR, USD, CZK)
+        const result = calculateResult(amount, currency, EUR, USD, CZK);
         const exchange = courseDisplay(currency, EUR, USD, CZK);
         updateResultText(result, exchange);
     };
@@ -63,7 +63,7 @@
     }
 
     const updateTextButton = () => {
-        const textButton = document.querySelector(".js-section__textButton")
+        const textButton = document.querySelector(".js-section__textButton");
         const questionElement = document.querySelector(".js-section__question");
 
         textButton.innerText = formElement.classList.contains("form--hiden")
@@ -82,4 +82,4 @@
 
     };
     finishingInteraction();
-}
+};
