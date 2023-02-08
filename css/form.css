@@ -107,5 +107,11 @@
 .form__exchangeCurrency {
     padding: 5px;
     font-weight: bold;
+}
+
+.form__exchange {
+    max-width: 270px;
+    border-radius: 10px;
+    padding: 10px;
     background-color: #dc930058;
 }
