@@ -22,12 +22,12 @@
                 return CZK;
         }
     };
-    const updateResultText = (result, exchange) => {
+    const updateResultText = (result, exchange, currency) => {
         const resultElement = document.querySelector(".js-form__result");
-        const exchangeCurrencyElement = document.querySelector(".form__exchangeCurrency");
+        const exchangeCurrencyElement = document.querySelector(".js-form__exchangeCurrency");
 
-        resultElement.innerText = `${(result.toFixed(2))}`;
-        exchangeCurrencyElement.innerText = `${exchange}`;
+        resultElement.innerText = `${(result.toFixed(2))} ${currency}`;
+        exchangeCurrencyElement.innerText = `1 PLN = ${exchange} ${currency}`;
     };
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -44,7 +44,7 @@
 
         const result = calculateResult(amount, currency, EUR, USD, CZK);
         const exchange = courseDisplay(currency, EUR, USD, CZK);
-        updateResultText(result, exchange);
+        updateResultText(result, exchange, currency);
     };
 
     const init = () => {
