@@ -103,3 +103,9 @@
 .form--hiden {
     display: none;
 }
+
+.form__exchangeCurrency {
+    padding: 5px;
+    font-weight: bold;
+    background-color: #dc930058;
+}
