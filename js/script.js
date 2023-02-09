@@ -29,31 +29,6 @@
         resultElement.innerText = `${(result.toFixed(2))} ${currency}`;
         exchangeCurrencyElement.innerText = `1 PLN = ${exchange} ${currency}`;
     };
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-
-        const EUR = 4.71;
-        const USD = 4.32;
-        const CZK = 0.19;
-
-        const amountElement = document.querySelector(".js-form__amount");
-        const currencyElement = document.querySelector(".js-form__currency");
-
-        const amount = +amountElement.value;
-        const currency = currencyElement.value;
-
-        const result = calculateResult(amount, currency, EUR, USD, CZK);
-        const exchange = courseDisplay(currency, EUR, USD, CZK);
-        updateResultText(result, exchange, currency);
-    };
-
-    const init = () => {
-        formElement = document.querySelector(".js-form");
-
-        formElement.addEventListener("submit", onFormSubmit);
-    };
-
-    init();
 
     const toggleClassForm = () => {
 
@@ -74,12 +49,31 @@
             ? "dziękuje Ci za wybranie mojego kalkulatora walut"
             : "kończymy na dziś ?";
     }
+    
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
-    const finishingInteraction = () => {
+        const EUR = 4.71;
+        const USD = 4.32;
+        const CZK = 0.19;
 
+        const amountElement = document.querySelector(".js-form__amount");
+        const currencyElement = document.querySelector(".js-form__currency");
+
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
+
+        const result = calculateResult(amount, currency, EUR, USD, CZK);
+        const exchange = courseDisplay(currency, EUR, USD, CZK);
+        updateResultText(result, exchange, currency);
+    };
+
+    const init = () => {
+        formElement = document.querySelector(".js-form");
         const buttonElement = document.querySelector(".js-section__button");
         buttonElement.addEventListener("click", toggleClassForm);
-
+        formElement.addEventListener("submit", onFormSubmit);
     };
-    finishingInteraction();
+
+    init();
 };
