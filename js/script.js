@@ -1,13 +1,8 @@
 {
     const calculateResult = (amount, currency, exchange) => {
 
-        switch (currency) {
-            case "EUR":
-                return amount / exchange;
-            case "USD":
-                return amount / exchange;
-            case "CZK":
-                return amount / exchange;
+        if (currency) {
+            return amount / exchange;
         }
     };
 
@@ -30,7 +25,7 @@
         const exchangeCurrencyElement = document.querySelector(".js-form__exchangeCurrency");
 
         resultElement.innerText = `${(result.toFixed(2))} ${currency}`;
-        exchangeCurrencyElement.innerText = `1 PLN = ${exchange} ${currency}`;
+        exchangeCurrencyElement.innerText = `${exchange} PLN = 1 ${currency}`;
     };
 
     const toggleClassForm = () => {
