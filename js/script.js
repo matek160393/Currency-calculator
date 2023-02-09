@@ -1,17 +1,20 @@
 {
-    const calculateResult = (amount, currency, EUR, USD, CZK) => {
+    const calculateResult = (amount, currency, exchange) => {
 
         switch (currency) {
             case "EUR":
-                return amount / EUR;
+                return amount / exchange;
             case "USD":
-                return amount / USD;
+                return amount / exchange;
             case "CZK":
-                return amount / CZK;
+                return amount / exchange;
         }
     };
 
-    const courseDisplay = (currency, EUR, USD, CZK) => {
+    const courseDisplay = (currency) => {
+        const EUR = 4.71;
+        const USD = 4.32;
+        const CZK = 0.19;
 
         switch (currency) {
             case "EUR":
@@ -53,18 +56,15 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const EUR = 4.71;
-        const USD = 4.32;
-        const CZK = 0.19;
-
         const amountElement = document.querySelector(".js-form__amount");
         const currencyElement = document.querySelector(".js-form__currency");
 
         const amount = +amountElement.value;
         const currency = currencyElement.value;
-
-        const result = calculateResult(amount, currency, EUR, USD, CZK);
-        const exchange = courseDisplay(currency, EUR, USD, CZK);
+        
+        const exchange = courseDisplay(currency);
+        const result = calculateResult(amount, currency, exchange);
+        
         updateResultText(result, exchange, currency);
     };
 
